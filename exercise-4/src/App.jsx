@@ -12,6 +12,10 @@ function App() {
         <section className="places-category">
           <ul className="places">
             {/* For each place from AVAILABLE_PLACES, create a Place component */}
+            {AVAILABLE_PLACES.map((picture) => (
+              <Place id={picture.id} title={picture.title} image={{ src: picture.image.src, alt: picture.image.alt }}
+              />
+            ))}
           </ul>
         </section>
       </main>
